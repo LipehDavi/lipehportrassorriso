@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Comprar — O LIPEH — Por Trás do Sorriso</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+}
+.container {
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+}
+button {
+    background:#4CAF50;
+    color:white;
+    padding:15px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+#pixBox {
+    margin-top:20px;
+    font-size:15px;
+    color:#333;
+    line-height:1.6;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>📘 O LIPEH — POR TRÁS DO SORRISO</h1>
+<h3>Pagamento via PIX — R$ 7,99</h3>
+
+<button onclick="copyPIX()">📋 Copiar código PIX</button>
+
+<div id="pixBox"></div>
+
+<script>
+function copyPIX() {
+
+let codigoPIX = `00020126710014br.gov.bcb.pix0114+55629981875530231EBOOK LIPEH POR TRAS DO SORISSO52040000530398654047.995802BR5924Felipe Davi da Costa Oli6009Sao Paulo610901227-20062240520daqr21989505986516736304378D`;
+
+navigator.clipboard.writeText(codigoPIX);
+
+document.getElementById('pixBox').innerHTML = `
+    <p><strong>PIX copia e cola copiado!</strong></p>
+    <p>Abra o app do seu banco → PIX → Copia e Cola → Cole o código → Pagar</p>
+    <p><b>Valor: R$ 7,99</b></p>
+`;
+}
+</script>
+
+</div>
+
+</body>
+</html>
